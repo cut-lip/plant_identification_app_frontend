@@ -6,10 +6,21 @@ function App() {
   const [data, setData] = useState([]);
   
   useEffect(() => {
-   //fetch('http://localhost:8000/api/1/')
-   // .then(response)
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://localhost:8000/api/1/');
+        if (!response.ok) {
+          throw new Error('Network response was not ok')
+        }
+        const jsonData = await response.json();
+        setData(jsonData);
+      } catch (error) {
+        console.error('Error fetch data:', error);
+        // Handle other errors
+      }
+    };
 
-   fetchData();
+    fetchData();
   }, {});
 
   return (
