@@ -41,7 +41,7 @@ function DataPage2() {
 
   return (
     <div>
-      <h1>Sample Data</h1>
+      <h1>Grand Fir Data</h1>
       <ul>
         {data.map((item, index) => (
           <li key={index}>{item.name}: {item.value}</li>
@@ -74,7 +74,7 @@ function DataPage1() {
 
   return (
     <div>
-      <h1>Sample Data</h1>
+      <h1>Douglas Fir Data</h1>
       <ul>
         {data.map((item, index) => (
           <li key={index}>{item.name}: {item.value}</li>
